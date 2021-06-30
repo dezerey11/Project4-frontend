@@ -36,6 +36,7 @@ function App() {
         <Switch>
           <Route exact path="/" render={(rp) => <AllPosts {...rp} />} />
           <Route exact path="/login" render={(rp) => <Login {...rp} />} />
+          <Route exact path="/posts/new" render={(rp) => <NewPost {...rp} />} />
           <Route
             exact
             path="/posts/:id"
@@ -46,7 +47,7 @@ function App() {
             path="/posts/:id/edit"
             render={(rp) => <SinglePostUser {...rp} />}
           />
-          <Route exact path="/posts/new" render={(rp) => <NewPost {...rp} />} />
+
           {/* <Route path="/signup" render={(rp) => <Signup {...rp} />} /> */}
         </Switch>
       </GlobalCtx.Provider>

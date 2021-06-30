@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Post from "../components/post";
 import { GlobalCtx } from "../App";
 
@@ -20,7 +20,29 @@ const AllPosts = () => {
   }, []);
 
   console.log(posts);
-  return posts.map((post) => <Post post={post} key={post.id} />);
-  // return <h1>This is the All Posts Component</h1>;
+
+  if (gState.token) {
+    return (
+      <div>
+        {posts.map((post) => (
+          <Link to={`/posts/${post.id}/edit`} key={post.id}>
+            <Post post={post} />
+          </Link>
+        ))}
+        <Link to="/posts/new">
+          <button>Create New Post</button>
+        </Link>
+      </div>
+    );
+  }
+  return (
+    <div>
+      {posts.map((post) => (
+        <Link to={`/posts/${post.id}`} key={post.id}>
+          <Post post={post} />
+        </Link>
+      ))}
+    </div>
+  );
 };
 export default AllPosts;

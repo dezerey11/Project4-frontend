@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { GlobalCtx } from "../App";
 
 const SinglePost = (props) => {
@@ -21,6 +22,19 @@ const SinglePost = (props) => {
     return <div>Loading...</div>;
   }
 
-  return <div>{post.title}</div>;
+  return (
+    <div>
+      <image src={post.image} width="100px" />
+
+      <h3>{post.image}</h3>
+      <h3>{post.title}</h3>
+      <h3>{post.decsription}</h3>
+      <h3>{post.price}</h3>
+      <h3>{post.contact}</h3>
+      <Link to="/">
+        <button>Return Home</button>
+      </Link>
+    </div>
+  );
 };
 export default SinglePost;
