@@ -1,6 +1,6 @@
 import React from "react";
 
-const Post = (props) => {
-  return <h1> Post Component</h1>;
+const Post = ({ post }) => {
+  return <h1> word {post.title}</h1>;
 };
 export default Post;

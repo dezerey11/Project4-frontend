@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -8,8 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <Router>
     <React.StrictMode>
-      {/* pass the app component into route to give access to router props */}
-      <Route path="/" component={App} />
+      <App />
     </React.StrictMode>
   </Router>,
   document.getElementById("root")

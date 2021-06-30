@@ -3,10 +3,10 @@ import { Switch, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import AllPosts from "./pages/AllPosts";
-import AllPostsUser from "./pages/AllPostsUser";
 import SinglePost from "./pages/SinglePost";
 import SinglePostUser from "./pages/SinglePostUser";
-import Form from "./pages/Form";
+
+import NewPost from "./pages/NewPost";
 
 import "./App.css";
 
@@ -14,8 +14,8 @@ export const GlobalCtx = React.createContext(null);
 
 function App() {
   const [gState, setGState] = React.useState({
-    url: "https://project4-classifiedads-backend.herokuapp.com/",
-    // url: "http://localhost:3000/",
+    // url: "https://project4-classifiedads-backend.herokuapp.com/",
+    url: "http://localhost:3000/",
     token: null,
     ready: false,
   });
@@ -35,8 +35,19 @@ function App() {
       <GlobalCtx.Provider value={{ gState, setGState }}>
         <Switch>
           <Route exact path="/" render={(rp) => <AllPosts {...rp} />} />
-          <Route path="/login" render={(rp) => <Login {...rp} />} />
-          <Route path="/signup" render={(rp) => <Signup {...rp} />} />
+          <Route exact path="/login" render={(rp) => <Login {...rp} />} />
+          <Route
+            exact
+            path="/posts/:id"
+            render={(rp) => <SinglePost {...rp} />}
+          />
+          <Route
+            exact
+            path="/posts/:id/edit"
+            render={(rp) => <SinglePostUser {...rp} />}
+          />
+          <Route exact path="/posts/new" render={(rp) => <NewPost {...rp} />} />
+          {/* <Route path="/signup" render={(rp) => <Signup {...rp} />} /> */}
         </Switch>
       </GlobalCtx.Provider>
     </div>

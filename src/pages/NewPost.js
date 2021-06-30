@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { GlobalCtx } from "../App";
 
-const SinglePost = (props) => {
+const NewPost = (props) => {
   const { gState } = React.useContext(GlobalCtx);
 
   const [post, setPost] = useState(null);
@@ -16,11 +16,6 @@ const SinglePost = (props) => {
   useEffect(() => {
     getPost();
   }, []);
-
-  if (!post) {
-    return <div>Loading...</div>;
-  }
-
-  return <div>{post.title}</div>;
+  return <h1> NewPost Component</h1>;
 };
-export default SinglePost;
+export default NewPost;
