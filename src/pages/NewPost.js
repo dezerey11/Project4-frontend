@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { GlobalCtx } from "../App";
 import { useHistory } from "react-router-dom";
 
-const NewPost = (props) => {
+const NewPost = () => {
   const { gState } = React.useContext(GlobalCtx);
   const history = useHistory();
 
-  const [post, setPost] = useState(null);
-  const [posts, setPosts] = useState([]);
+  const [post] = useState(null);
+  const [setPosts] = useState([]);
 
   const [formData, setFormData] = useState({
     image: "",
@@ -51,6 +51,7 @@ const NewPost = (props) => {
     event.preventDefault();
     createPost(formData);
     history.push("/");
+    history.go(0);
   };
 
   return (

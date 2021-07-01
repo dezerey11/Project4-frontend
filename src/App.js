@@ -1,10 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+// import Signup from "./pages/Signup";
 import AllPosts from "./pages/AllPosts";
 import SinglePost from "./pages/SinglePost";
 import SinglePostUser from "./pages/SinglePostUser";
+import Navbar from "./components/navbar";
 
 import NewPost from "./pages/NewPost";
 
@@ -33,6 +34,8 @@ function App() {
   return (
     <div className="App">
       <GlobalCtx.Provider value={{ gState, setGState }}>
+        <Route path="/" component={Navbar} />
+
         <Switch>
           <Route exact path="/" render={(rp) => <AllPosts {...rp} />} />
           <Route exact path="/login" render={(rp) => <Login {...rp} />} />

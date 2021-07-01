@@ -60,16 +60,13 @@ const SinglePostUser = (props) => {
   };
 
   const deletePost = async () => {
-    const response = await fetch(
-      gState.url + "posts/" + props.match.params.id,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + gState.token,
-        },
-      }
-    );
+    await fetch(gState.url + "posts/" + props.match.params.id, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + gState.token,
+      },
+    });
     // get updated post
     getPost();
     history.push("/");
@@ -82,20 +79,22 @@ const SinglePostUser = (props) => {
   return (
     <div>
       <form>
-        <h1>Title</h1>
-        <input
-          type="text"
-          name="title"
-          placeholder={post.title}
-          value={formData.title}
-          onChange={handleChange}
-        />
+        <br />
+        <img src={formData.image} width="100px" />
         <h1>Image</h1>
         <input
           type="text"
           name="image"
           placeholder={post.image}
           value={formData.image}
+          onChange={handleChange}
+        />
+        <h1>Title</h1>
+        <input
+          type="text"
+          name="title"
+          placeholder={post.title}
+          value={formData.title}
           onChange={handleChange}
         />
         <h1>Price</h1>
@@ -126,13 +125,16 @@ const SinglePostUser = (props) => {
         />
         <br />
         <br />
-        <h1>{post.title}</h1>
         <button type="button" onClick={updatePost}>
           Update
         </button>
+        <br />
+        <br />
         <button type="button" onClick={deletePost}>
           Delete
         </button>
+        <br />
+        <br />
         <Link to="/">
           <button>Go Back</button>
         </Link>

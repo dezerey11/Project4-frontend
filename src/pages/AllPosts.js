@@ -23,22 +23,23 @@ const AllPosts = () => {
 
   if (gState.token) {
     return (
-      <div>
+      <div className="posts-container">
         {posts.map((post) => (
-          <Link to={`/posts/${post.id}/edit`} key={post.id}>
+          <Link
+            to={`/posts/${post.id}/edit`}
+            key={post.id}
+            className="post-link"
+          >
             <Post post={post} />
           </Link>
         ))}
-        <Link to="/posts/new">
-          <button>Create New Post</button>
-        </Link>
       </div>
     );
   }
   return (
-    <div>
+    <div className="posts-container">
       {posts.map((post) => (
-        <Link to={`/posts/${post.id}`} key={post.id}>
+        <Link to={`/posts/${post.id}`} key={post.id} className="post-link">
           <Post post={post} />
         </Link>
       ))}
