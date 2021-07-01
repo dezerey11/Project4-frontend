@@ -9,7 +9,6 @@ const Navbar = () => {
   console.log(gState);
   const logout = () => {
     window.localStorage.removeItem("token");
-    history.push("/project4-frontend");
     window.location.reload();
   };
 
