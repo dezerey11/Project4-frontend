@@ -6,7 +6,6 @@ const Navbar = () => {
   const { gState } = React.useContext(GlobalCtx);
 
   const history = useHistory();
-  console.log(gState);
   const logout = () => {
     window.localStorage.removeItem("token");
     window.location.reload();

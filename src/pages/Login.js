@@ -28,7 +28,6 @@ const Login = (props) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         window.localStorage.setItem("token", JSON.stringify(data));
         setGState({ ...gState, token: data.token });
         setForm(blank);

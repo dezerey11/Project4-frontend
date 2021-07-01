@@ -19,8 +19,6 @@ const AllPosts = () => {
     getPosts();
   }, []);
 
-  console.log(posts);
-
   if (gState.token) {
     return (
       <div className="posts-container">

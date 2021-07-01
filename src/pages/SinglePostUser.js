@@ -41,8 +41,6 @@ const SinglePostUser = (props) => {
     }
   }, [gState.ready, gState.token]);
 
-  console.log(gState);
-
   if (!post) {
     return <div>Loading...</div>;
   }

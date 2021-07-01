@@ -32,7 +32,6 @@ const Signup = (props) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setForm(blank);
         props.history.push("/login");
       });
