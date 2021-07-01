@@ -71,14 +71,16 @@ const NewPost = () => {
           onChange={handleChange}
         />
         <h1>Price</h1>
-        $
+
+        <strong>$</strong>
         <input
           type="text"
           name="price"
           value={formData.price}
           onChange={handleChange}
         />
-        .00
+        <strong>.00</strong>
+
         <h1>Contact</h1>
         <input
           type="text"
@@ -95,7 +97,7 @@ const NewPost = () => {
         />
         <br />
         <br />
-        <input type="submit" value="Create" />
+        <input type="submit" value="Create Post" className="submit-button" />
       </form>
     </div>
   );

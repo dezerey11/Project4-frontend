@@ -32,15 +32,50 @@
   }
 }
 
-input {
-  padding: 10px 50px;
-  font-size: 20px;
+body {
+  background-image: url("https://image.freepik.com/free-photo/white-hexagon-pattern-background-3d-rendering_41470-446.jpg");
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
 }
+strong {
+  font-size: 25px;
+}
+
+.submit-button {
+  color: yellow;
+  background-color: black;
+  font-family: "Amatic SC", cursive;
+}
+
+.submit-button:hover {
+  color: black;
+  background-color: yellow;
+  font-family: "Amatic SC", cursive;
+}
+
+input {
+  padding: 10px 30px;
+  font-size: 25px;
+  font-family: "Amatic SC", cursive;
+}
+
+button {
+  padding: 10px 30px;
+  font-size: 25px;
+  font-family: "Amatic SC", cursive;
+}
+
+.delete-button:hover {
+  background-color: red;
+  color: White;
+}
+
 .navbar {
   margin: 20px;
   display: flex;
   justify-content: space-around;
   background-color: grey;
+  border-radius: 20px;
 }
 .nav-link {
   text-decoration: none;
@@ -78,4 +113,5 @@ input {
   flex-wrap: wrap;
   margin: 50px;
   background-color: white;
+  border-radius: 20px;
 }

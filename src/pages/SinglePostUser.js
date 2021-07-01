@@ -69,7 +69,7 @@ const SinglePostUser = (props) => {
     });
     // get updated post
     getPost();
-    history.push("/");
+    history.push("/project4-frontend");
   };
 
   const handleChange = (event) => {
@@ -125,19 +125,18 @@ const SinglePostUser = (props) => {
         />
         <br />
         <br />
-        <button type="button" onClick={updatePost}>
+        <button type="button" onClick={updatePost} className="submit-button">
           Update
         </button>
         <br />
         <br />
-        <button type="button" onClick={deletePost}>
+        <button
+          type="button"
+          onClick={deletePost}
+          className="submit-button delete-button"
+        >
           Delete
         </button>
-        <br />
-        <br />
-        <Link to="/">
-          <button>Go Back</button>
-        </Link>
       </form>
     </div>
   );

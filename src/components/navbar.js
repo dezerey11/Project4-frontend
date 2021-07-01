@@ -27,7 +27,7 @@ const Navbar = () => {
           onClick={logout}
           style={{ textDecoration: "none" }}
         >
-          <h2 className="nav-link">Logout</h2>
+          <h2 className="nav-link">Log Out</h2>
         </Link>
       </div>
     );
@@ -39,7 +39,7 @@ const Navbar = () => {
         <h2 className="nav-link">Home</h2>
       </Link>
       <Link to="/login" style={{ textDecoration: "none" }}>
-        <h2 className="nav-link">Login</h2>
+        <h2 className="nav-link">Log In</h2>
       </Link>
     </div>
   );
