@@ -23,7 +23,11 @@ const Navbar = () => {
         <Link to="/posts/new" style={{ textDecoration: "none" }}>
           <h2 className="nav-link">Create Post </h2>
         </Link>
-        <Link to="/" onClick={logout} style={{ textDecoration: "none" }}>
+        <Link
+          to="/project4-frontend"
+          onClick={logout}
+          style={{ textDecoration: "none" }}
+        >
           <h2 className="nav-link">Logout</h2>
         </Link>
       </div>
