@@ -7,7 +7,7 @@ const NewPost = () => {
   const history = useHistory();
 
   const [post] = useState(null);
-  const [setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
 
   const [formData, setFormData] = useState({
     image: "",
