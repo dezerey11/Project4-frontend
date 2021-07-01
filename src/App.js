@@ -15,8 +15,8 @@ export const GlobalCtx = React.createContext(null);
 
 function App() {
   const [gState, setGState] = React.useState({
-    // url: "https://project4-classifiedads-backend.herokuapp.com/",
-    url: "http://localhost:3000/",
+    url: "https://project4-classifiedads-backend.herokuapp.com/",
+    // url: "http://localhost:3000/",
     token: null,
     ready: false,
   });
