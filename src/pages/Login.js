@@ -32,7 +32,7 @@ const Login = (props) => {
         window.localStorage.setItem("token", JSON.stringify(data));
         setGState({ ...gState, token: data.token });
         setForm(blank);
-        props.history.push("/");
+        props.history.push("/project4-frontend");
       });
   };
 

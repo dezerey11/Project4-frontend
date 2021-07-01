@@ -37,7 +37,11 @@ function App() {
         <Route path="/" component={Navbar} />
 
         <Switch>
-          <Route exact path="/" render={(rp) => <AllPosts {...rp} />} />
+          <Route
+            exact
+            path="/project4-frontend"
+            render={(rp) => <AllPosts {...rp} />}
+          />
           <Route exact path="/login" render={(rp) => <Login {...rp} />} />
           <Route exact path="/posts/new" render={(rp) => <NewPost {...rp} />} />
           <Route

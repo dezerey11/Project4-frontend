@@ -50,7 +50,7 @@ const NewPost = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     createPost(formData);
-    history.push("/");
+    history.push("/project4-frontend");
     history.go(0);
   };
 
