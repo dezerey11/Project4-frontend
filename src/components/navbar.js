@@ -10,7 +10,7 @@ const Navbar = () => {
   const logout = () => {
     window.localStorage.removeItem("token");
     history.push("/project4-frontend");
-    history.go(0);
+    window.location.reload();
   };
 
   if (gState.token) {

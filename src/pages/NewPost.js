@@ -51,7 +51,6 @@ const NewPost = () => {
     event.preventDefault();
     createPost(formData);
     history.push("/project4-frontend");
-    // history.go(0);
   };
 
   return (
