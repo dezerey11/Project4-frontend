@@ -48,9 +48,10 @@ const NewPost = () => {
   };
 
   const handleSubmit = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     createPost(formData);
     history.push("/project4-frontend");
+    window.location.reload();
   };
 
   return (
